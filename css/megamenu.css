@@ -1,0 +1,202 @@
+ * -------------------------- */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url(fonts/fontawesome-webfont.eot);
+  src: url(fonts/fontawesome-webfont.eot) format('embedded-opentype'), url(fonts/fontawesome-webfont.woff) format('woff'), url(fonts/fontawesome-webfont.ttf) format('truetype'), url(fonts/fontawesome-webfont.svg) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/18px "FontAwesome";
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.fa-fw {
+  width: 1.28571429em;
+  text-align: center;
+  z-index:10;
+  overflow:visible;
+  position:static;
+  padding:0px 20px 0px 5px;
+  margin:0px;
+  left:0;
+  top:0;
+  text-index:0px;
+  clip-auto;
+}
+.fa-film:before {
+  content: "\f008";
+}
+
+.fa-book:before {
+  content: "\f02d";
+}
+.fa-music:before {
+  content: "\f025";
+}
+
+.fa-angle-right:before {
+  content: "\f105";
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+.menu {
+    width: 100%;
+    height: 75px;
+    background-color: rgba(0, 0, 0, 1);
+    position: fixed;
+    background-color:rgba(4, 180, 49, 0.6);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.light-menu {
+    width: 100%;
+    height: 75px;
+    background-color: rgba(255, 255, 255, 1);
+    position: fixed;
+    background-color:rgba(4, 180, 49, 0.6);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+
+#menu-center {
+    width: 980px;
+    height: 75px;
+    margin: 0 auto;
+    position:relative;
+}
+#menu-center ul {
+    margin: 15px 0 0 0;
+}
+#menu-center ul li {
+    list-style: none;
+    margin: 0 30px 0 0;
+    display: inline;
+}
+.active {
+    font-family:'Droid Sans', serif;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    line-height: 50px;
+}
+a {
+    font-family:'Droid Sans', serif;
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+    line-height: 50px;
+}
+#menu-center .sub-menu,#menu-center .menu-top .sub-menu-wrap  {
+	display:none;
+	opacity:0;
+	background:#fff;
+	width:100%;
+	position:absolute;
+	top:100px;
+	left: 0px;
+	overflow: auto;
+	-webkit-box-shadow: 2px 15x 30px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 2px 15px 30px 0px rgba(0,0,0,0.75);
+	box-shadow: 2px 15px 30px 0px rgba(0,0,0,0.75);
+	margin:15px 0px 0px 0px;
+}
+#menu-center .menu-top {
+	padding-bottom:30px;
+}
+
+.is-active.menu-top .sub-menu, .is-active #menu-center .menu-top  .sub-menu-wrap  {
+	visibility:visible;
+}
+
+#menu-center .sub-menu > li {
+	display:block;
+	float:left;
+	width:24%;
+	margin:0px;	
+}
+#menu-center .sub-menu > li > ul.sub-sub-menu {
+	width:100%;
+	margin:0px;
+	padding:0px;
+}
+#menu-center .sub-menu > li > ul.sub-sub-menu > li {
+	width:100%;
+	display:block;
+	line-height:24px;
+}
+#menu-center .sub-menu > li > ul.sub-sub-menu > li a {
+	line-height:30px;
+}
+#menu-center .sub-menu > li > h3 {
+	font:bold 14px/22px arial,verdana,serif;
+	color:#fb2921;
+	margin:5px 0px;
+	padding:0px;
+	height:32px;
+}
+.sub-menu .tabs {
+	float:left;
+	list-style-type:none;
+	margin:0px !important;
+	padding:0px;
+	width:30%;
+	background:#fff;
+	height:auto;
+	border-right:1px solid #eee;
+	min-height:348px;
+}
+.sub-menu .tabs > li > a { 
+	width:100%;
+	text-align:left;
+	padding:5px;
+}
+.sub-menu .tabs li {
+	width:100%;
+	padding:0px;
+	margin:0px !important;
+	line-height:24px;
+	display:block !important;
+	width:100%;
+}
+.sub-menu .tabs li i {
+	color:#000;
+}
+.sub-menu .tabs li i,.sub-menu .tabs li .tab-title {
+	font-size:12px;
+	line-height:18px;
+}
+.sub-menu .tab-item {
+  display:none;
+  background:#fff;
+  height:auto;
+  min-height:348px;
+  float:left;
+  visibility:hidden;
+  opacity:0;
+  transition:visibility 1s, opacity 1s; 
+}
+.sub-menu .tabs li.active {
+	background:#dedede;
+}
+.sub-menu .tab-item.tab-active {
+  display:block;
+  visibility:visible; 
+  opacity:1;	
+}
+.sub-menu .tabs li:hover {
+  background:#DDD;
+}
